@@ -1,0 +1,27 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Test20</title>
+    <link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">please select one or more email address to encrypt file: </h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item" th:each="email:${emails}">
+                <span th:text="${email.emailAddress}"></span>
+            </li>
+        </ul>
+    </div>
+    <button class="btn" onclick="window.open('/cmd')">upload resumes</button>
+</div>
+
+<script th:src="@{jquery-3.1.1.js}" type="text/javascript"></script>
+<script th:src="@{bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+
+</body>
+</html>
