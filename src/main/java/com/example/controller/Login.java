@@ -29,6 +29,10 @@ public class Login {
         return "Hello World~";
     }
 
+    /*
+    how to add button at the end of every email address,
+    and when click one button, the email address will add to encrypt list
+     */
     @RequestMapping(value="/",method = RequestMethod.GET)
     public ModelAndView index(Model model){
         ModelAndView mav = new ModelAndView("email");
